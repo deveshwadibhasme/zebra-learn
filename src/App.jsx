@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="w-full min-h-screen max-w-screen mx-auto">
+    <div className="min-h-screen max-w-screen-2xl mx-auto bg-black">
       <Header />
       <TabSwitcher />
         <Outlet />

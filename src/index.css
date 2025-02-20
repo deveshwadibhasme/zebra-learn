@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+*{
+    --btn-color: rgb(255,86,18);
+    font-family:'Montserrat' , sans-serif;
+}
+
+#root{
+    @apply w-full max-w-screen bg-black;
+}
+
+@layer base{
+    .flex-center{
+        @apply flex justify-center items-center;
+    }
+}
