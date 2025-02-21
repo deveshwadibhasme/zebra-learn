@@ -1,4 +1,5 @@
 import Carousel from '../components/Carousel'
+import Skeleton from "../components/Skeleton";
 
 const Course = () => {
   const slides = [
@@ -6,10 +7,14 @@ const Course = () => {
   ];
 
   return (
-    <div>
-      <Carousel slides={slides}/>
-      
-    </div>
+    <div className="">
+    <>
+      {
+        <Skeleton width={"max-w-4xl"} height={"min-h-96"} /> && (
+        <Carousel slides={slides} />
+      )}
+    </>
+  </div>
   )
 }
 

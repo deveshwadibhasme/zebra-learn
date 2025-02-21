@@ -1,4 +1,4 @@
-import React from "react";
+import Skeleton from "../components/Skeleton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -58,16 +58,26 @@ const TabSwitcher = () => {
         <FontAwesomeIcon icon={faHome} />
       </Link>
       {tabs.map((tab, index) => (
-        <Link
-          to={tab.link}
-          key={index}
-          className={`h-10 gap-2 px-4 py-3 rounded-lg text-white/50 hover:text-white cursor-pointer border-1 
+        <>
+          {(
+            <Skeleton
+              width={"w-20"}
+              height={"h-10"}
+              borderRadius={"rounded-lg"}
+            />
+          ) && (
+            <Link
+              to={tab.link}
+              key={index}
+              className={`h-10 gap-2 px-4 py-3 rounded-lg text-white/50 hover:text-white cursor-pointer border-1 
           ${pathname === `${tab.link}` ? "border-white" : "border-white/15"} 
           flex-center`}
-        >
-          <FontAwesomeIcon icon={tab.icon} />
-          <span className="text-sm font-normal">{tab.label}</span>
-        </Link>
+            >
+              <FontAwesomeIcon icon={tab.icon} />
+              <span className="text-sm font-normal">{tab.label}</span>
+            </Link>
+          )}
+        </>
       ))}
     </div>
   );
