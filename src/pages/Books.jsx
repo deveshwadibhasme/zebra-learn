@@ -1,5 +1,6 @@
 import Carousel from "../components/Carousel";
 import Skeleton from "../components/Skeleton";
+import SearchBar from "../components/SearchBar";
 
 const Books = () => {
   const slides = [
@@ -9,13 +10,14 @@ const Books = () => {
   ];
 
   return (
-    <div className="">
+    <div className="mx-auto max-w-screen px-6 flex flex-col gap-1.5">
       <>
         {
           <Skeleton width={"max-w-4xl"} height={"min-h-96"} /> && (
           <Carousel slides={slides} />
         )}
       </>
+      <SearchBar width={'max-w-sm'}/>
     </div>  
   );
 };

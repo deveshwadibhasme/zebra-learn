@@ -1,8 +1,10 @@
 import React from "react";
 import Carousel from "../components/Carousel";
 import Skeleton from "../components/Skeleton";
+import SearchBar from "../components/SearchBar";
 
 const Home = () => {
+
   const slides = [
     "https://zebralearn.com/_next/image/?url=https%3A%2F%2Fapi.reader.zebralearn.com%2Fapi%2Fbanner%2Fimages%2F66fe0fbb3ab78db87d20d096%2FwebLarge&w=1200&q=75",
     "https://zebralearn.com/_next/image/?url=https%3A%2F%2Fapi.reader.zebralearn.com%2Fapi%2Fbanner%2Fimages%2F66d9846a8e32337c4bab9e01%2FwebLarge&w=1200&q=75",
@@ -12,12 +14,19 @@ const Home = () => {
   ];
 
   return (
-    <div className="">
-      <>
-        {<Skeleton width={"max-w-4xl"} height={"min-h-96"} /> && (
-          <Carousel slides={slides} />
-        )}
-      </>
+    <div className="mx-auto max-w-screen px-6 flex flex-col gap-1.5">
+      {
+      (
+        <Skeleton
+          width={"max-w-3xl w-full"}
+          height={"min-h-96"}
+          borderRadius={"rounded-lg"}
+        />
+      ) && 
+      <Carousel slides={slides} />
+      }
+      <SearchBar width={'max-w-sm'}/>
+      
     </div>
   );
 };
