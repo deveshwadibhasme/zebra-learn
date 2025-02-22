@@ -1,9 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 const CatagoriesTabSwitch = ({ catagory }) => {
   const [scrolled, setScrolled] = useState(false);
   const scrollDiv = useRef();
+  const [searchParams,setSearchParams] = useSearchParams()
+
+  const filter = searchParams.get('filter') || 'All'
+
+  const handleFilter = (filterName) =>{
+    setSearchParams({ filter: filterName })
+  }
 
   const handleScroll = () => {
     !scrolled
@@ -44,8 +52,10 @@ const CatagoriesTabSwitch = ({ catagory }) => {
       >
         {catagory.map((c, i) => (
           <div
+          onClick={()=>handleFilter(c.heading)}
             key={i}
-            className="px-3 cursor-pointer hover:text-white shrink-0"
+            className="px-5 cursor-pointer hover:text-white shrink-0 transition-all"
+            style={{ borderBottom: `${filter === c.heading ? '2px solid white' : ''}`}}
           >
             {c.heading}
           </div>
