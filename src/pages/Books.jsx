@@ -1,6 +1,8 @@
 import Carousel from "../components/Carousel";
 import Skeleton from "../components/Skeleton";
 import SearchBar from "../components/SearchBar";
+import CatagoriesTabSwitch from "../components/CatagoriesTabSwitch";
+import Catagories from "../jsons/booksCatagories.json";
 
 const Books = () => {
   const slides = [
@@ -17,6 +19,7 @@ const Books = () => {
           <Carousel slides={slides} />
         )}
       </>
+      <CatagoriesTabSwitch catagory={Catagories.categories} />
       <SearchBar width={'max-w-sm'}/>
     </div>  
   );

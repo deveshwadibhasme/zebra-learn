@@ -1,0 +1,239 @@
+{
+    "categories": [
+        {
+            "heading": "All"
+        },
+        {
+            "heading": "Business",
+            "books": [
+                {
+                    "title": "The Lean Startup",
+                    "author": "Eric Ries"
+                },
+                {
+                    "title": "Good to Great",
+                    "author": "Jim Collins"
+                },
+                {
+                    "title": "The Innovator's Dilemma",
+                    "author": "Clayton Christensen"
+                },
+                {
+                    "title": "Zero to One",
+                    "author": "Peter Thiel"
+                },
+                {
+                    "title": "The Hard Thing About Hard Things",
+                    "author": "Ben Horowitz"
+                },
+                {
+                    "title": "Measure What Matters",
+                    "author": "John Doerr"
+                }
+            ]
+        },
+        {
+            "heading": "Finance",
+            "books": [
+                {
+                    "title": "The Intelligent Investor",
+                    "author": "Benjamin Graham"
+                },
+                {
+                    "title": "Rich Dad Poor Dad",
+                    "author": "Robert Kiyosaki"
+                },
+                {
+                    "title": "The Millionaire Next Door",
+                    "author": "Thomas J. Stanley"
+                },
+                {
+                    "title": "Common Stocks and Uncommon Profits",
+                    "author": "Philip Fisher"
+                },
+                {
+                    "title": "One Up On Wall Street",
+                    "author": "Peter Lynch"
+                },
+                {
+                    "title": "A Random Walk Down Wall Street",
+                    "author": "Burton G. Malkiel"
+                }
+            ]
+        },
+        {
+            "heading": "Career",
+            "books": [
+                {
+                    "title": "So Good They Can't Ignore You",
+                    "author": "Cal Newport"
+                },
+                {
+                    "title": "What Color Is Your Parachute?",
+                    "author": "Richard N. Bolles"
+                },
+                {
+                    "title": "The 7 Habits of Highly Effective People",
+                    "author": "Stephen R. Covey"
+                },
+                {
+                    "title": "Drive",
+                    "author": "Daniel H. Pink"
+                },
+                {
+                    "title": "Mindset",
+                    "author": "Carol S. Dweck"
+                },
+                {
+                    "title": "The Start-up of You",
+                    "author": "Reid Hoffman"
+                }
+            ]
+        },
+        {
+            "heading": "Marketing",
+            "books": [
+                {
+                    "title": "This Is Marketing",
+                    "author": "Seth Godin"
+                },
+                {
+                    "title": "Contagious",
+                    "author": "Jonah Berger"
+                },
+                {
+                    "title": "Made to Stick",
+                    "author": "Chip Heath & Dan Heath"
+                },
+                {
+                    "title": "Building a StoryBrand",
+                    "author": "Donald Miller"
+                },
+                {
+                    "title": "Influence",
+                    "author": "Robert Cialdini"
+                },
+                {
+                    "title": "Positioning",
+                    "author": "Al Ries & Jack Trout"
+                }
+            ]
+        },
+        {
+            "heading": "Mathematics",
+            "books": [
+                {
+                    "title": "The Joy of x",
+                    "author": "Steven Strogatz"
+                },
+                {
+                    "title": "How Not to Be Wrong",
+                    "author": "Jordan Ellenberg"
+                },
+                {
+                    "title": "A Mathematician's Apology",
+                    "author": "G.H. Hardy"
+                },
+                {
+                    "title": "Gödel, Escher, Bach",
+                    "author": "Douglas Hofstadter"
+                },
+                {
+                    "title": "The Princeton Companion to Mathematics",
+                    "author": "Timothy Gowers"
+                },
+                {
+                    "title": "Fermat's Enigma",
+                    "author": "Simon Singh"
+                }
+            ]
+        },
+        {
+            "heading": "HR",
+            "books": [
+                {
+                    "title": "Work Rules!",
+                    "author": "Laszlo Bock"
+                },
+                {
+                    "title": "First, Break All the Rules",
+                    "author": "Marcus Buckingham"
+                },
+                {
+                    "title": "The Five Dysfunctions of a Team",
+                    "author": "Patrick Lencioni"
+                },
+                {
+                    "title": "Radical Candor",
+                    "author": "Kim Scott"
+                },
+                {
+                    "title": "Drive",
+                    "author": "Daniel H. Pink"
+                },
+                {
+                    "title": "The Culture Code",
+                    "author": "Daniel Coyle"
+                }
+            ]
+        },
+        {
+            "heading": "Real Estate",
+            "books": [
+                {
+                    "title": "The Book on Rental Property Investing",
+                    "author": "Brandon Turner"
+                },
+                {
+                    "title": "The Millionaire Real Estate Investor",
+                    "author": "Gary Keller"
+                },
+                {
+                    "title": "Rich Dad's Guide to Investing",
+                    "author": "Robert Kiyosaki"
+                },
+                {
+                    "title": "The Real Estate Wholesaling Bible",
+                    "author": "Than Merrill"
+                },
+                {
+                    "title": "The ABCs of Real Estate Investing",
+                    "author": "Ken McElroy"
+                },
+                {
+                    "title": "Commercial Real Estate Investing for Dummies",
+                    "author": "Peter Conti"
+                }
+            ]
+        },
+        {
+            "heading": "Personal Finance",
+            "books": [
+                {
+                    "title": "Your Money or Your Life",
+                    "author": "Vicki Robin"
+                },
+                {
+                    "title": "The Total Money Makeover",
+                    "author": "Dave Ramsey"
+                },
+                {
+                    "title": "I Will Teach You to Be Rich",
+                    "author": "Ramit Sethi"
+                },
+                {
+                    "title": "Broke Millennial",
+                    "author": "Erin Lowry"
+                },
+                {
+                    "title": "The Richest Man in Babylon",
+                    "author": "George S. Clason"
+                },
+                {
+                    "title": "Financial Freedom",
+                    "author": "Grant Sabatier"
+                }
+            ]
+        }
+    ]
+}

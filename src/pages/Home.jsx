@@ -33,7 +33,7 @@ const Home = () => {
             <h1 className="text-white font-bold text-xl mb-2.5">
               {bd.heading}
             </h1>
-            <div key={i} className="flex gap-2.5 overflow-x-auto max-w-screen w-full scroll-m-1 scroll-hide">
+            <div key={i} className="flex gap-2.5 overflow-x-auto max-w-screen w-full scroll-hide">
               {booksJson[i].content
                 .filter((book) =>
                   book.title.toLowerCase().includes(params.toLowerCase())
@@ -43,14 +43,14 @@ const Home = () => {
                     {(
                       <Skeleton
                         key={i}
-                        width={"max-w-3xs"}
-                        height={"min-h-72"}
+                        width={"max-w-52"}
+                        height={"min-h-56"}
                         borderRadius={"rounded-lg"}
                       />
                     ) && (
                       <Link
                         key={bd.id}
-                        className="min-h-72 max-w-3xs w-full flex flex-col gap-1.5 bg-red-400 shrink-0 p-1"
+                        className="max-w-52 w-full flex flex-col gap-1.5 bg-red-400 shrink-0 p-1"
                       >
                         <img
                           src={bd.cover}

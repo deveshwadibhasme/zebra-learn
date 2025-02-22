@@ -18,3 +18,13 @@
         display: hidden;
     }
 }
+
+@layer utilities {
+    .scroll-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scroll-hide {
+      -ms-overflow-style: none; /* IE & Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
