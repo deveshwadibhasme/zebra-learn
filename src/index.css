@@ -9,8 +9,12 @@
     @apply w-full max-w-screen bg-black;
 }
 
+
 @layer base{
     .flex-center{
         @apply flex justify-center items-center;
+    }
+    .scroll-hide::--webkit-scrollbar{
+        display: hidden;
     }
 }
