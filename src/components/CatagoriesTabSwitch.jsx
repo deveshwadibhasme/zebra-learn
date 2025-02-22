@@ -21,7 +21,7 @@ const CatagoriesTabSwitch = ({ catagory }) => {
   return (
     <div className="max-w-xl relative">
       <FontAwesomeIcon
-        className="absolute top-0 -left-0 p-2 rounded-4xl bg-amber-50 text-black cursor-pointer"
+        className="absolute -top-1 -left-0 p-2 rounded-4xl bg-amber-50 text-black cursor-pointer"
         style={{ display: `${!scrolled ? "none" : "block"}` }}
         onClick={handleScroll}
         icon={faArrowLeft}
@@ -40,7 +40,7 @@ const CatagoriesTabSwitch = ({ catagory }) => {
         ))}
       </div>
       <FontAwesomeIcon
-        className="absolute top-0 -right-0 p-2 rounded-4xl bg-amber-50 text-black cursor-pointer"
+        className="absolute -top-1 -right-0 p-2 rounded-4xl bg-amber-50 text-black cursor-pointer"
         icon={faArrowRight}
         style={{ display: `${scrolled ? "none" : "block"}` }}
         onClick={handleScroll}
