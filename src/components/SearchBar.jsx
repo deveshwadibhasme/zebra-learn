@@ -4,16 +4,16 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useSearchParams } from "react-router-dom";
 
 const SearchBar = ({ width }) => {
-    
-  const { 1: setSearchParam } = useSearchParams();
+  const [searchParams, setSearchParam] = useSearchParams();
+  const filter = searchParams.get("filter") || "All";
 
   const handleSearch = (e) => {
-    setSearchParam({ search: e.target.value });
+    setSearchParam({ filter:filter, search: e.target.value });
   };
 
   return (
     <div
-      className={`${width} h-10 rounded-2xl bg-slate-700 flex items-center gap-2 px-3 text-white`}
+      className={`${width} h-10 rounded-full bg-slate-700 flex items-center gap-2 px-3 text-white`}
     >
       <FontAwesomeIcon icon={faMagnifyingGlass} />
       <input

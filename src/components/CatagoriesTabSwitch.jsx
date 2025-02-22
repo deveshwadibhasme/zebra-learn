@@ -8,9 +8,10 @@ const CatagoriesTabSwitch = ({ catagory }) => {
   const [searchParams,setSearchParams] = useSearchParams()
 
   const filter = searchParams.get('filter') || 'All'
+  const search = searchParams.get('search') || ''
 
   const handleFilter = (filterName) =>{
-    setSearchParams({ filter: filterName })
+    setSearchParams({ search: search ,filter: filterName }) 
   }
 
   const handleScroll = () => {
@@ -62,7 +63,7 @@ const CatagoriesTabSwitch = ({ catagory }) => {
         ))}
       </div>
       <FontAwesomeIcon
-        className="absolute -top-1 -right-0 p-2 rounded-4xl border-1 bg-amber-50/40 hover:border-white text-black cursor-pointer"
+        className="absolute -top-1 -right-0 p-2 rounded-4xl hover:border-1 shadow-[0px] shadow-slate-800 hover:border-white text-white cursor-pointer"
         icon={faArrowRight}
         style={{ display: `${scrolled ? "none" : "block"}` }}
         onClick={handleScroll}
