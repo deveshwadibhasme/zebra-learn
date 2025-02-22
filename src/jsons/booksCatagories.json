@@ -1,8 +1,16 @@
 {
+    "headings": [
+        {"heading": "All"},
+        {"heading": "Business"},
+        {"heading": "Finance"},
+        {"heading": "Career"},
+        {"heading": "Marketing"},
+        {"heading": "Mathematics"},
+        {"heading": "HR"},
+        {"heading": "Real Estate"},
+        {"heading": "Personal Finance"}
+    ],
     "categories": [
-        {
-            "heading": "All"
-        },
         {
             "heading": "Business",
             "books": [
