@@ -5,10 +5,11 @@ import { useSearchParams } from "react-router-dom";
 
 const SearchBar = ({ width }) => {
   const [searchParams, setSearchParam] = useSearchParams();
-  const filter = searchParams.get("filter") || "All";
+  
+  const filter = searchParams.get("filter") || "";
 
   const handleSearch = (e) => {
-    setSearchParam({ filter:filter, search: e.target.value });
+    setSearchParam({ search: e.target.value, filter: filter });
   };
 
   return (

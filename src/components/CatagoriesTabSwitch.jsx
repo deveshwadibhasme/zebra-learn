@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-const CatagoriesTabSwitch = ({ catagory }) => {
+const CatagoriesTabSwitch = ({ headings }) => {
   const [scrolled, setScrolled] = useState(false);
   const scrollDiv = useRef();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -29,7 +29,6 @@ const CatagoriesTabSwitch = ({ catagory }) => {
 
   useEffect(() => {
     scrollDiv.current.addEventListener('scroll',(e)=>{
-      console.dir(e.target);
       if(scrollDiv.current.scrollLeft === 0) {
         setScrolled(false)
       }
@@ -52,16 +51,16 @@ const CatagoriesTabSwitch = ({ catagory }) => {
         ref={scrollDiv}
         className="flex w-full h-9 border-b-2 border-slate-600 mb-3 text-white scroll-hide overflow-y-hidden overflow-x-auto"
       >
-        {catagory.map((c, i) => (
+        {headings.map((c, i) => (
           <div
             onClick={() => handleFilter(c.heading)}
             key={i}
             className="px-5 cursor-pointer hover:text-white shrink-0 transition-all"
             style={{
-              borderBottom: `${filter === c.heading ? "2px solid white" : ""}`,
+              borderBottom: `${filter === c.heading  ? "2px solid white" : ""}`,
             }}
           >
-            {c.heading}
+            {c.heading} 
           </div>
         ))}
       </div>
