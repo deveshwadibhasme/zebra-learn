@@ -5,46 +5,49 @@ import { useSearchParams } from "react-router-dom";
 const CatagoriesTabSwitch = ({ catagory }) => {
   const [scrolled, setScrolled] = useState(false);
   const scrollDiv = useRef();
-  const [searchParams,setSearchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const filter = searchParams.get('filter') || 'All'
-  const search = searchParams.get('search') || ''
+  const filter = searchParams.get("filter") || "All";
+  const search = searchParams.get("search") || "";
 
-  const handleFilter = (filterName) =>{
-    setSearchParams({ search: search ,filter: filterName }) 
-  }
-
-  const handleScroll = () => {
-    !scrolled
-      ? scrollDiv.current.scrollBy({
-          left: scrollDiv.current.scrollWidth,
-          behavior: "smooth",
-        })
-      : scrollDiv.current.scrollBy({
-          left: -scrollDiv.current.scrollWidth  ,
-          behavior: "smooth",
-        });
-    setScrolled(!scrolled);
+  const handleFilter = (filterName) => {
+    setSearchParams({ search: search, filter: filterName });
   };
 
-  useEffect(()=>{
-    scrollDiv.current.addEventListener('scroll' ,(e)=>{
-      if(e.target.scrollLeft === 0) {
-        setScrolled(false) 
+  const handleScrollLeft = () => {
+    scrollDiv.current.scrollBy({
+      left: -scrollDiv.current.scrollWidth,
+      behavior: "smooth",
+    }),
+    setScrolled(!scrolled);
+  };
+  const handleScrollRight = () => {
+    scrollDiv.current.scrollBy({
+      left: scrollDiv.current.scrollWidth,
+      behavior: "smooth",
+    }),
+      setScrolled(!scrolled);
+  };
+
+  useEffect(() => {
+    scrollDiv.current.addEventListener('scroll',(e)=>{
+      console.dir(e.target);
+      if(scrollDiv.current.scrollLeft === 0) {
+        setScrolled(false)
       }
-      if(e.target.scrollLeft === scrollDiv.current.scrollWidth) {
-        setScrolled(true) 
+      if(scrollDiv.current.scrollLeft > scrollDiv.current.scrollWidth - scrollDiv.current.clientWidth) {
+        setScrolled(!scrolled)
       }
-      e.stopPropagation();
     })
   })
 
+
   return (
-    <div className="max-w-xl relative">
+    <div className="max-w-xl w-full relative h-full">
       <FontAwesomeIcon
-        className="absolute -top-1 -left-0 p-2 rounded-4xl border-1 bg-amber-50/40 hover:border-white text-black cursor-pointer"
+        className="absolute -top-1 -left-0 p-2 rounded-full border-1 bg-amber-50/40 hover:border-white text-black cursor-pointer"
         style={{ display: `${!scrolled ? "none" : "block"}` }}
-        onClick={handleScroll}
+        onClick={handleScrollLeft}
         icon={faArrowLeft}
       />
       <div
@@ -53,20 +56,22 @@ const CatagoriesTabSwitch = ({ catagory }) => {
       >
         {catagory.map((c, i) => (
           <div
-          onClick={()=>handleFilter(c.heading)}
+            onClick={() => handleFilter(c.heading)}
             key={i}
             className="px-5 cursor-pointer hover:text-white shrink-0 transition-all"
-            style={{ borderBottom: `${filter === c.heading ? '2px solid white' : ''}`}}
+            style={{
+              borderBottom: `${filter === c.heading ? "2px solid white" : ""}`,
+            }}
           >
             {c.heading}
           </div>
         ))}
       </div>
       <FontAwesomeIcon
-        className="absolute -top-1 -right-0 p-2 rounded-4xl hover:border-1 shadow-[0px] shadow-slate-800 hover:border-white text-white cursor-pointer"
+        className="absolute -top-1 -right-0 p-2 rounded-4xl hover:border-1 bg-amber-50/40 hover:border-white text-black cursor-pointer"
         icon={faArrowRight}
         style={{ display: `${scrolled ? "none" : "block"}` }}
-        onClick={handleScroll}
+        onClick={handleScrollRight}
       />
     </div>
   );

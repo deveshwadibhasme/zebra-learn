@@ -23,7 +23,7 @@ const Books = () => {
           <Carousel slides={slides} />
         )}
       </>
-      <div className="flex items-center justify-between w-full ">
+      <div className="flex flex-col xl:flex-row items-center justify-between w-full">
       <CatagoriesTabSwitch catagory={Catagories.categories} />
       <SearchBar width={'max-w-xl w-full'}/>
       </div>
