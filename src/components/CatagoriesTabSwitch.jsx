@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 const CatagoriesTabSwitch = ({ catagory }) => {
   const [scrolled, setScrolled] = useState(false);
   const scrollDiv = useRef();
@@ -18,10 +18,22 @@ const CatagoriesTabSwitch = ({ catagory }) => {
     setScrolled(!scrolled);
   };
 
+  useEffect(()=>{
+    scrollDiv.current.addEventListener('scroll' ,(e)=>{
+      if(e.target.scrollLeft === 0) {
+        setScrolled(false) 
+      }
+      if(e.target.scrollLeft === scrollDiv.current.scrollWidth) {
+        setScrolled(true) 
+      }
+      e.stopPropagation();
+    })
+  })
+
   return (
     <div className="max-w-xl relative">
       <FontAwesomeIcon
-        className="absolute -top-1 -left-0 p-2 rounded-4xl bg-amber-50 text-black cursor-pointer"
+        className="absolute -top-1 -left-0 p-2 rounded-4xl border-1 bg-amber-50/40 hover:border-white text-black cursor-pointer"
         style={{ display: `${!scrolled ? "none" : "block"}` }}
         onClick={handleScroll}
         icon={faArrowLeft}
@@ -40,7 +52,7 @@ const CatagoriesTabSwitch = ({ catagory }) => {
         ))}
       </div>
       <FontAwesomeIcon
-        className="absolute -top-1 -right-0 p-2 rounded-4xl bg-amber-50 text-black cursor-pointer"
+        className="absolute -top-1 -right-0 p-2 rounded-4xl border-1 bg-amber-50/40 hover:border-white text-black cursor-pointer"
         icon={faArrowRight}
         style={{ display: `${scrolled ? "none" : "block"}` }}
         onClick={handleScroll}
