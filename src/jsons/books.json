@@ -1,0 +1,125 @@
+[
+    {
+        "heading": "Featured Books",
+        "content": [
+            {
+                "id": 1,
+                "title": "The Great Gatsby",
+                "pageCount": 180,
+                "cover": "https://example.com/placeholder.jpg"
+            },
+            {
+                "id": 2,
+                "title": "To Kill a Mockingbird",
+                "pageCount": 281,
+                "cover": "https://example.com/placeholder.jpg"
+            },
+            {
+                "id": 3,
+                "title": "1984",
+                "pageCount": 328,
+                "cover": "https://example.com/placeholder.jpg"
+            },
+            {
+                "id": 4,
+                "title": "Pride and Prejudice",
+                "pageCount": 279,
+                "cover": "https://example.com/placeholder.jpg"
+            },
+            {
+                "id": 5,
+                "title": "The Catcher in the Rye",
+                "pageCount": 214,
+                "cover": "https://example.com/placeholder.jpg"
+            }
+        ]
+    },
+    {
+        "heading": "Zebra Learn Best Seller",
+        "content": [
+            {
+                "id": 1,
+                "pageCount": 320,
+                "title": "The Great Gatsby",
+                "cover": "https://example.com/covers/the-great-gatsby.jpg"
+            },
+            {
+                "id": 2,
+                "pageCount": 450,
+                "title": "To Kill a Mockingbird",
+                "cover": "https://example.com/covers/to-kill-a-mockingbird.jpg"
+            },
+            {
+                "id": 3,
+                "pageCount": 300,
+                "title": "1984",
+                "cover": "https://example.com/covers/1984.jpg"
+            },
+            {
+                "id": 4,
+                "pageCount": 500,
+                "title": "Moby Dick",
+                "cover": "https://example.com/covers/moby-dick.jpg"
+            },
+            {
+                "id": 5,
+                "pageCount": 275,
+                "title": "Pride and Prejudice",
+                "cover": "https://example.com/covers/pride-and-prejudice.jpg"
+            },
+            {
+                "id": 6,
+                "pageCount": 350,
+                "title": "The Catcher in the Rye",
+                "cover": "https://example.com/covers/the-catcher-in-the-rye.jpg"
+            },
+            {
+                "id": 7,
+                "pageCount": 400,
+                "title": "The Hobbit",
+                "cover": "https://example.com/covers/the-hobbit.jpg"
+            },
+            {
+                "id": 8,
+                "pageCount": 600,
+                "title": "War and Peace",
+                "cover": "https://example.com/covers/war-and-peace.jpg"
+            },
+            {
+                "id": 9,
+                "pageCount": 320,
+                "title": "The Odyssey",
+                "cover": "https://example.com/covers/the-odyssey.jpg"
+            }
+        ]
+    },
+    {
+        "heading": "Top Career Books",
+        "content": [
+            {
+                "id": 1,
+                "title": "Career Development",
+                "cover": "career_development_cover.jpg",
+                "pageCount": 320
+            },
+            {
+                "id": 2,
+                "title": "The Career Playbook",
+                "cover": "career_playbook_cover.jpg",
+                "pageCount": 250
+            },
+            {
+                "id": 3,
+                "title": "Designing Your Life",
+                "cover": "designing_your_life_cover.jpg",
+                "pageCount": 280
+            },
+            {
+                "id": 4,
+                "title": "What Color Is Your Parachute?",
+                "cover": "parachute_cover.jpg",
+                "pageCount": 350
+            }
+        ]
+    }
+]
