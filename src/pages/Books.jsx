@@ -18,18 +18,15 @@ const Books = () => {
   return (
     <div className="mx-auto max-w-screen px-6 flex flex-col gap-1.5">
       <>
-        {
-          <Skeleton width={"max-w-4xl"} height={"min-h-96"} /> && (
+        {<Skeleton width={"max-w-4xl"} height={"min-h-96"} /> && (
           <Carousel slides={slides} />
         )}
       </>
-      <div className="flex flex-col xl:flex-row items-center justify-between w-full">
-      <CatagoriesTabSwitch catagory={Catagories.categories} />
-      <SearchBar width={'max-w-xl w-full'}/>
+      <div className="flex flex-col gap-2 w-full">
+        <CatagoriesTabSwitch catagory={Catagories.categories} />
+        <SearchBar width={"max-w-xl w-full"} />
       </div>
-
-      
-    </div>  
+    </div>
   );
 };
 

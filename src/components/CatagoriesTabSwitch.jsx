@@ -18,15 +18,13 @@ const CatagoriesTabSwitch = ({ catagory }) => {
     scrollDiv.current.scrollBy({
       left: -scrollDiv.current.scrollWidth,
       behavior: "smooth",
-    }),
-    setScrolled(!scrolled);
+    })
   };
   const handleScrollRight = () => {
     scrollDiv.current.scrollBy({
       left: scrollDiv.current.scrollWidth,
       behavior: "smooth",
-    }),
-      setScrolled(!scrolled);
+    })
   };
 
   useEffect(() => {
@@ -43,7 +41,7 @@ const CatagoriesTabSwitch = ({ catagory }) => {
 
 
   return (
-    <div className="max-w-xl w-full relative h-full">
+    <div className="max-w-2xl w-full relative h-full my-auto">
       <FontAwesomeIcon
         className="absolute -top-1 -left-0 p-2 rounded-full border-1 bg-amber-50/40 hover:border-white text-black cursor-pointer"
         style={{ display: `${!scrolled ? "none" : "block"}` }}
