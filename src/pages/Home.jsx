@@ -14,8 +14,16 @@ const Home = () => {
     "https://zebralearn.com/_next/image/?url=https%3A%2F%2Fapi.reader.zebralearn.com%2Fapi%2Fbanner%2Fimages%2F66fe10033ab78db87d20d2f8%2FwebLarge&w=1200&q=75",
   ];
 
-  const { 0: searchParams } = useSearchParams();
+  // const { 0: searchParams } = useSearchParams();
+  
+  const [searchParams, setSearchParam] = useSearchParams();
+  
   const params = searchParams.get("search") || "";
+  // const filter = searchParams.get("filter") || "";
+
+  const handleSearch = (e) => {
+    setSearchParam({ search: e.target.value});
+  };
 
   return (
     <div className="mx-auto max-w-screen px-6 flex flex-col gap-1.5">
@@ -26,15 +34,15 @@ const Home = () => {
           borderRadius={"rounded-lg"}
         />
       ) && <Carousel slides={slides} />}
-      <SearchBar width={"max-w-sm"} />
+      <SearchBar width={"max-w-sm"} handleSearch={handleSearch} />
       <div className="w-full flex flex-col gap-1.5 mt-2">
         {booksJson.map((bd, i) => (
-          <div key={i} className="min-h-96 w-full max-w-screen">
+          <div key={i} className="min-h-96 w-full max-w-7xl mx-auto">
             <h1 className="text-white font-bold text-xl mb-2.5">
               {bd.heading}
             </h1>
             <div key={i} className="flex gap-2.5 overflow-x-auto max-w-screen w-full scroll-hide">
-              {booksJson[i].content
+              {bd.content
                 .filter((book) =>
                   book.title.toLowerCase().includes(params.toLowerCase())
                 )

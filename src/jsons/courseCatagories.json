@@ -1,0 +1,85 @@
+{
+    "headings": [
+        {"heading": "All"},
+        {"heading": "Finance"},
+        {"heading": "FinTech"},
+        {"heading": "Personal Finance"}
+    ],
+    "categories": [
+        {
+            "heading": "Finance",
+            "courses": [
+                {
+                    "title": "Introduction to Finance",
+                    "timeLong": "42 hours"
+                },
+                {
+                    "title": "Financial Markets",
+                    "timeLong": "56 hours"
+                },
+                {
+                    "title": "Corporate Finance Essentials",
+                    "timeLong": "35 hours"
+                },
+                {
+                    "title": "Advanced Financial Accounting",
+                    "timeLong": "48 hours"
+                },
+                {
+                    "title": "Risk Management in Finance",
+                    "timeLong": "50 hours"
+                }
+            ]
+        },
+        {
+            "heading": "FinTech",
+            "courses": [
+                {
+                    "title": "Blockchain and Cryptocurrency Explained",
+                    "timeLong": "28 hours"
+                },
+                {
+                    "title": "FinTech Innovations",
+                    "timeLong": "42 hours"
+                },
+                {
+                    "title": "AI in Finance",
+                    "timeLong": "49 hours"
+                },
+                {
+                    "title": "Digital Banking and Payments",
+                    "timeLong": "36 hours"
+                },
+                {
+                    "title": "Regulatory Challenges in FinTech",
+                    "timeLong": "40 hours"
+                }
+            ]
+        },
+        {
+            "heading": "Personal Finance",
+            "courses": [
+                {
+                    "title": "Personal Finance 101",
+                    "timeLong": "28 hours"
+                },
+                {
+                    "title": "Investment Strategies",
+                    "timeLong": "35 hours"
+                },
+                {
+                    "title": "Retirement Planning Basics",
+                    "timeLong": "42 hours"
+                },
+                {
+                    "title": "Budgeting and Saving Essentials",
+                    "timeLong": "30 hours"
+                },
+                {
+                    "title": "Understanding Credit and Loans",
+                    "timeLong": "38 hours"
+                }
+            ]
+        }
+    ]
+}

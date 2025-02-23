@@ -2,17 +2,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-const CatagoriesTabSwitch = ({ headings }) => {
+const CatagoriesTabSwitch = ({ headings , handleFilter }) => {
   const [scrolled, setScrolled] = useState(false);
   const scrollDiv = useRef();
-  const [searchParams, setSearchParams] = useSearchParams();
 
+  const { 0: searchParams } = useSearchParams();
   const filter = searchParams.get("filter") || "All";
-  const search = searchParams.get("search") || "";
-
-  const handleFilter = (filterName) => {
-    setSearchParams({ search: search, filter: filterName });
-  };
+  
 
   const handleScrollLeft = () => {
     scrollDiv.current.scrollBy({
@@ -40,9 +36,9 @@ const CatagoriesTabSwitch = ({ headings }) => {
 
 
   return (
-    <div className="max-w-2xl w-full relative h-full my-auto">
+    <div className="max-w-xl w-full relative h-full pt-1">
       <FontAwesomeIcon
-        className="absolute -top-1 -left-0 p-2 rounded-full border-1 bg-amber-50/40 hover:border-white text-black cursor-pointer"
+        className="absolute -top-0 -left-0 p-2 rounded-full border-1 bg-amber-50/40 hover:border-white text-black cursor-pointer"
         style={{ display: `${!scrolled ? "none" : "block"}` }}
         onClick={handleScrollLeft}
         icon={faArrowLeft}
@@ -65,7 +61,7 @@ const CatagoriesTabSwitch = ({ headings }) => {
         ))}
       </div>
       <FontAwesomeIcon
-        className="absolute -top-1 -right-0 p-2 rounded-4xl hover:border-1 bg-amber-50/40 hover:border-white text-black cursor-pointer"
+        className="absolute -top-0 -right-0 p-2 rounded-4xl hover:border-1 bg-amber-50/40 hover:border-white text-black cursor-pointer"
         icon={faArrowRight}
         style={{ display: `${scrolled ? "none" : "block"}` }}
         onClick={handleScrollRight}

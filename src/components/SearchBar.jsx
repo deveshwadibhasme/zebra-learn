@@ -3,14 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useSearchParams } from "react-router-dom";
 
-const SearchBar = ({ width }) => {
-  const [searchParams, setSearchParam] = useSearchParams();
-  
-  const filter = searchParams.get("filter") || "";
-
-  const handleSearch = (e) => {
-    setSearchParam({ search: e.target.value, filter: filter });
-  };
+const SearchBar = ({ width , handleSearch }) => {
+ 
 
   return (
     <div
